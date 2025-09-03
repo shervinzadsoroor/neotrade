@@ -1,7 +1,7 @@
 package com.neotrade.domain.model.market;
 
 import com.neotrade.domain.model.Asset;
-import com.neotrade.domain.model.BaseEntity;
+import com.neotrade.domain.model.BaseDomain;
 import com.neotrade.domain.model.Order;
 import com.neotrade.domain.model.Trade;
 import com.neotrade.shared.enumeration.MarketStatus;
@@ -20,7 +20,7 @@ import java.util.Set;
 @Entity
 @EntityListeners(MarketListener.class)
 @Table(name = "MARKET", schema = "NEOTRADE")
-public class Market extends BaseEntity {
+public class Market extends BaseDomain {
 
     private static final String TABLE_NAME = "MARKET";
 

@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Entity
 @Table(name = "ORDER", schema = "NEOTRADE")
-public class Order extends BaseEntity {
+public class Order extends BaseDomain {
 
     private static final String TABLE_NAME = "ORDER";
 

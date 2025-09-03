@@ -1,4 +1,4 @@
-package com.neotrade.domain.model;
+package com.neotrade.infrastructure.persistence.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

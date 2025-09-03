@@ -1,6 +1,6 @@
 package com.neotrade.domain.model.wallet;
 
-import com.neotrade.domain.model.BaseEntity;
+import com.neotrade.domain.model.BaseDomain;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -14,7 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "HOT_WALLET", schema = "NEOTRADE")
-public class HotWallet extends BaseEntity {
+public class HotWallet extends BaseDomain {
 
     private static final String TABLE_NAME = "HOT_WALLET";
 

@@ -15,7 +15,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(name = "TRADE", schema = "NEOTRADE")
-public class Trade extends BaseEntity {
+public class Trade extends BaseDomain {
 
     private static final String TABLE_NAME = "TRADE";
 

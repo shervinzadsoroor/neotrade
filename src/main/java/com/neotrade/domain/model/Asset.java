@@ -17,7 +17,7 @@ import java.util.Set;
         uniqueConstraints = {
                 @UniqueConstraint(columnNames = {"symbol"})
         })
-public class Asset extends BaseEntity {
+public class Asset extends BaseDomain {
 
     private static final String TABLE_NAME = "ASSET";
 

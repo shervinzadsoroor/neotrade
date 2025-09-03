@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Entity
 @Table(name = "TRANSACTION", schema = "NEOTRADE")
-public class Transaction extends BaseEntity {
+public class Transaction extends BaseDomain {
 
     private static final String TABLE_NAME = "TRANSACTION";
 

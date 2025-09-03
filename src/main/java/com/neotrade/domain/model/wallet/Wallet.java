@@ -1,10 +1,8 @@
 package com.neotrade.domain.model.wallet;
 
-import com.neotrade.domain.model.Account;
 import com.neotrade.domain.model.Asset;
-import com.neotrade.domain.model.BaseEntity;
+import com.neotrade.domain.model.BaseDomain;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,7 +15,7 @@ import java.math.BigDecimal;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 //@Table(name = "WALLET", schema = "NEOTRADE")
-public abstract class Wallet extends BaseEntity {
+public abstract class Wallet extends BaseDomain {
 
     private static final String TABLE_NAME = "WALLET";
 

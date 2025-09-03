@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "ACCOUNT", schema = "NEOTRADE")
-public class Account extends BaseEntity {
+public class Account extends BaseDomain {
 
     private static final String TABLE_NAME = "ACCOUNT";
 
