@@ -1,8 +1,13 @@
 package com.neotrade.infrastructure.persistence.mapper;
 
 import com.neotrade.domain.model.user.User;
-import com.neotrade.infrastructure.persistence.entity.UserEntity;
+import com.neotrade.infrastructure.persistence.entity.user.UserEntity;
+import com.neotrade.infrastructure.persistence.entity.user.UserRole;
+import com.neotrade.shared.enumeration.Role;
 import org.springframework.stereotype.Component;
+
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Component
 public class UserMapper extends BaseMapper<User, UserEntity> {
@@ -14,7 +19,7 @@ public class UserMapper extends BaseMapper<User, UserEntity> {
                 .lastName(entity.getLastName())
                 .email(entity.getEmail())
                 .kycLevel(entity.getKycLevel())
-                .roles(entity.getRoles())
+                .roles(entity.getRoles().stream().map(UserRole::getRole).collect(Collectors.toSet()))
                 .build();
         setupBaseFieldsOnDomain(entity, domain);
         return domain;
@@ -27,9 +32,16 @@ public class UserMapper extends BaseMapper<User, UserEntity> {
                 .lastName(domain.getLastName())
                 .email(domain.getEmail())
                 .kycLevel(domain.getKycLevel())
-                .roles(domain.getRoles())
                 .build();
         setupBaseFieldsOnEntity(domain, entity);
+        setupUserEntityRoles(entity, domain.getRoles());
         return entity;
+    }
+
+    private void setupUserEntityRoles(UserEntity entity, Set<Role> roles) {
+        Set<UserRole> userRoles = roles.stream()
+                .map(role -> new UserRole(entity, role))
+                .collect(Collectors.toSet());
+        entity.setRoles(userRoles);
     }
 }

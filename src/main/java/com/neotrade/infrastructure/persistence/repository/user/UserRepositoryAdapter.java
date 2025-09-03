@@ -2,7 +2,7 @@ package com.neotrade.infrastructure.persistence.repository.user;
 
 import com.neotrade.application.port.out.UserRepositoryPort;
 import com.neotrade.domain.model.user.User;
-import com.neotrade.infrastructure.persistence.entity.UserEntity;
+import com.neotrade.infrastructure.persistence.entity.user.UserEntity;
 import com.neotrade.infrastructure.persistence.mapper.UserMapper;
 import com.neotrade.infrastructure.persistence.repository.PersistenceContextProvider;
 import lombok.RequiredArgsConstructor;

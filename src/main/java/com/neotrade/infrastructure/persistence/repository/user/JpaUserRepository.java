@@ -1,6 +1,6 @@
 package com.neotrade.infrastructure.persistence.repository.user;
 
-import com.neotrade.infrastructure.persistence.entity.UserEntity;
+import com.neotrade.infrastructure.persistence.entity.user.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,6 +1,6 @@
-package com.neotrade.infrastructure.persistence.entity;
+package com.neotrade.infrastructure.persistence.entity.user;
 
-import com.neotrade.domain.model.user.UserRole;
+import com.neotrade.infrastructure.persistence.entity.BaseEntity;
 import com.neotrade.shared.enumeration.KYCLevel;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
